@@ -44,5 +44,15 @@ function customRender(reactElem, rootElem) {
     rootElem.appendChild(domelem);
 }
 customRender(reactElem, root);
+// class 5
+// custom hook (useState())
+let btn = document.getElementById("btn");
+let val = 0;
+let count = document.getElementById('counter');
+count.innerHTML = val;
+btn.addEventListener("click", () => {
+    count.innerHTML = ++val;
+    // console.log(val);
+});
 
 
