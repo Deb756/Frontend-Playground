@@ -10,6 +10,37 @@
 > - **setCount** = updating count where needed,
 > - **eg ->** setCount(count++)
 
+## Interview Question
+
+> interview question what will be the answer of bellow
+
+```jsx
+// Question
+const [count, setCount] = useState(15);
+const increment = () => {
+  setCount(count + 1);
+  setCount(count + 1);
+  setCount(count + 1);
+  setCount(count + 1); // what will be the counter value when button click
+  // Ans = 15 + 1 = 16
+  // here in this only the the last line will be rendered bcz here we're  doin same count + 1
+  //  like setCount(count+1) = 16
+  //       setCount(count +1) = 16 ans so on , so to rendering same thing again and again but {count} value is remains unchanged
+};
+
+// solution
+// make the ++count or in setCount(prevCount => prevCount + 1)
+// bcz setCounter((x) => x) provides a call back fuction by default
+const solution = () => {
+  setCount((prevCount) => prevCount + 1); // or setCount(++count)
+  setCount((prevCount) => prevCount + 1);
+  setCount((prevCount) => prevCount + 1); // prevCount is func argument for count we can put count also but it make code incosistant
+  setCount((prevCount) => prevCount + 1); // what will be the counter value when button click
+  // Ans = 15 + 4 = 20
+  // bcz here the actual {count} is changeing
+};
+```
+
 ## React Props
 
 > its used to send data in the form of **Object** from **one component to another**
