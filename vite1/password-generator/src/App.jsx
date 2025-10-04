@@ -56,7 +56,7 @@ function App() {
             type="text"
             value={password}
             placeholder="password"
-            className="outline-none rounded-l-md py-1 bg-white px-3 w-full text-black"
+            className="outline-none  rounded-l-md py-1 bg-white px-3 w-full text-black"
             ref={getPasswordRef}
             readOnly
           />
