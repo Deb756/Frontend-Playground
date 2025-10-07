@@ -7,7 +7,7 @@
 - Returns an object of URL parameters (from dynamic routes).
 - Use when you define routes with parameters like /`users/:id`
 
-2. `useLoaderData()`
+2. `useLoaderData()`    
 
 - Used to get data returned by a loader function in route configuration.
 - It avoids fetching data manually inside components.
