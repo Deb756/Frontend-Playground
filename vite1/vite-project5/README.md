@@ -1,16 +1,25 @@
-# React + Vite
+# Project : UI Light Mode & Dark Mode changer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Coverded Topics : `Context Api ,React.createContext() , context.Provider ,useContext(context)`
 
-Currently, two official plugins are available:
+**( Important -> Go to `Theme.js` then `App.jsx` then `ToggleButton.jsx` for better grasp )**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. `Context Api`
 
-## React Compiler
+   - Context lets components pass information deep down without explicitly passing props.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. `React.createContext()`
+   - Lets you create a Context that components can provide or read.
+   - defaultValue The value you want the context to have when there is no matching
+   - in the tree above the component reading the context. This is meant as a "last resort" fallback.
+3. `contextName.Provider`
+   - Used to provide the Created context to a Component
+   - eg .
+   ```jsx
+   export const ThemeProvider = ThemeContext.Provider;
+   ```
+   - And next we will have to wrap all the Component of `App.jsx` to `<ThemeProvider values={//all values passed when creatingContext}>`
+     then any Component in our App can use it directly by calling `useContext()`
+4. `useContext(Context)`
+   - Accepts a context object (the value returned from `React.createContext`) and returns the current
+   - **Returns a stateful value, and a function to update it.**
