@@ -1,16 +1,35 @@
-# React + Vite
+# Project : Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Topic covereded : Context Api , LocalStorage
 
-Currently, two official plugins are available:
+1. `Localstorage in react`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   - Properties & methods()
 
-## React Compiler
+     - The **`length`** read-only property of the `Storage` object.
+     - `readonly length: number;`
+     - The **`clear()`** method of the Storage interface clears all keys stored in a given `Storage` object.
+     - `clear(): void;`
+     - The **`getItem()`** method of the Storage interface, when passed a key name, will return that key's value, or `null` if the key does not exist, in the given `Storage` object.
+     - `getItem(key: string): string | null;`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+     - The **`key()`** method of the Storage interface, when passed a number n, returns the name of the nth key in a given `Storage` object.
+     - `key(index: number): string | null;`
+     - The **`removeItem()`** method of the Storage interface, when passed a key name, will remove that key from the given `Storage` object if it exists.
+     - `removeItem(key: string): void;`
+     - The **`setItem()`** method of the Storage interface, when passed a key name and value, will add that key to the given `Storage` object, or update that key's value if it already exists.
+     - `setItem(key: string, value: string): void;[name: string]: any;`
 
-## Expanding the ESLint configuration
+2. `Examples.`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `localStrorage.getItem(key: string)`
+
+  ```jsx
+  JSON.parse(localStorage.getItem("TodosArr"));
+  ```
+
+- `localStrorage.setItem(key: string, value: string)`
+
+  ```jsx
+  localStorage.setItem("TodosArr", JSON.stringify(currTodos));
+  ```
