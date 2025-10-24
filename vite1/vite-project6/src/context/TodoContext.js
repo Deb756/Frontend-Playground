@@ -9,7 +9,7 @@ export const TodoContext = createContext({
             description: '1st todo',
             compleated: false
         }
-    ],
+    ],  
     saveTodo: (todo) => { },
     updateTodo: (id, todo) => { },
     deleteTodo: (id) => { },

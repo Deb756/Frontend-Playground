@@ -110,24 +110,23 @@ npm install react-redux @reduxjs/toolkit
    - Go to Entry file `src\main.jsx`
    - wrap root component :
 
-   ````jsx
-       import { StrictMode } from "react";
-       import { createRoot } from "react-dom/client";
-       import "./index.css";
-       import App from "./App.jsx";
-       import { Provider } from "react-redux";
-       import { Store } from "./App/Store.js";
+   ```jsx
+   import { StrictMode } from "react";
+   import { createRoot } from "react-dom/client";
+   import "./index.css";
+   import App from "./App.jsx";
+   import { Provider } from "react-redux";
+   import { Store } from "./App/Store.js";
 
-       createRoot(document.getElementById("root")).render(
-       <StrictMode>
+   createRoot(document.getElementById("root")).render(
+     <StrictMode>
        // here added
        <Provider store={Store}>
-       <App />
+         <App />
        </Provider>
-       </StrictMode>
-       );
-       ```
-   ````
+     </StrictMode>
+   );
+   ```
 
 6. Now ur Ready to read and change the state anywhere in the app
 
